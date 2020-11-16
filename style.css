@@ -94,7 +94,7 @@ html{
     position: fixed;
     top: 0;
     right: -40rem;
-    background-color: white;
+    background-color: rgba(220, 220, 220, .9);
     transition: right 0.5s;
     z-index: 100;
     display: flex;
@@ -183,7 +183,7 @@ html{
 
 .produto-imagem-wrapper{
     position: relative;
-    top: 10rem;
+    top: 5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -209,8 +209,8 @@ html{
 }
 
 .produto-imagem img{
-    width: 30rem;
-    height: 20rem;
+    width: 25vh;
+    height: 13vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -226,7 +226,7 @@ html{
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    top: 95%;
+    bottom: 0rem;
 }
 
 .botoes button{
@@ -240,6 +240,58 @@ html{
     position: relative;
     left: 7rem;
     width: 8rem;
+    font-family: 'Mulish', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.compra{
+    background-color: black;
+    height: 100vh;
+}
+
+.compra-wrapper{
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.compra-wrapper img{
+    width: 40vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5rem 7rem 0rem 7rem;
+    margin: 2rem;
+}
+
+.descricao {
+    width: 60%;
+    text-align: center;
+    color: white;
+    font-family: "Mulish", serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.compra-nome {
+    font-size: 3.2rem;
+    font-family: "Josefin Slab",serif;
+}
+
+.compra-preco {
+    font-size: 2.5rem;
+    font-family: "Josefin Slab",serif;
+}
+
+.compra-botao {
+    margin: 2%;
+    width: 10%;
     font-family: 'Mulish', serif;
     font-weight: 400;
     font-size: 1.5rem;
