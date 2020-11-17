@@ -48,12 +48,11 @@
                     $numero_de_linhas += 1;
                 }
                     echo "<div class='produto-imagem'>";
+                    echo "<a href=./compra.php?id_teclado='".$id[$i]."'>";
                     echo "<img src='imagens/teclado/".$nomes[$i].".jpg'>";
+                    echo "</a>";
                     echo "<div class='nome'>".$nomes[$i]."</div>";
                     echo "<div class='preco'>R$".$precos[$i]."</div>";
-                    echo "<form action ='compra.php' method='get'>";
-                    echo "<button type = 'submit' name='id_teclado' value='".$id[$i]."'>Comprar</button>";
-                    echo "</form>";
                     echo "</div>";
                 $items_na_linha += 1;
             }

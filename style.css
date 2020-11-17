@@ -215,6 +215,11 @@ html{
     flex-direction: row;
     justify-content: center;
     margin: 5rem 7rem 0rem 7rem;
+    transition: opacity 0.4s;
+}
+
+.produto-imagem img:hover{
+    opacity: 0.2;
 }
 
 .botoes{
@@ -226,14 +231,22 @@ html{
     right: 0; 
     margin-left: auto; 
     margin-right: auto; 
-    bottom: 0rem;
+    bottom: 2rem;
 }
 
 .botoes button{
+    font-family: "Mulish",serif;
+    font-weight: bold;
     font-size: 1.5rem;
     margin: 0.3rem;
     width: 2rem;
     height: 2rem;
+    border: none;
+    transition: background-color 0.15s;
+}
+
+.botoes button:hover {
+    background-color: #c29525;
 }
 
 .produto-imagem button {
@@ -289,10 +302,33 @@ html{
     font-family: "Josefin Slab",serif;
 }
 
+.compra-wrapper form {
+    margin: 2rem;
+    width: 15%;
+}
+
 .compra-botao {
-    margin: 2%;
-    width: 10%;
+    width: 100%;
     font-family: 'Mulish', serif;
     font-weight: 400;
     font-size: 1.5rem;
+    border: none;
+    transition: background-color 0.4s;
+}
+
+.compra-botao:hover {
+    background-color: #c29525;
+}
+
+.compra-efetuada {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+    top: 50%;
+    font-family: "Mulish", serif;
+    font-size: 6rem;
+    color: green;
 }

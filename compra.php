@@ -40,7 +40,9 @@
      assumenda obcaecati hic maxime aspernatur a. Asperiores laborum eius esse aut mollitia suscipit 
      quasi placeat rem sequi necessitatibus.";
     echo "</div>";
-    echo "<button onclick='compraClick(".'"'.$string_nome.'"'.")' class='compra-botao'>Comprar ".$nomes[0]."</button>";
+    echo "<form method='get' action='compra_efetuada.php'>";
+    echo "<button type='submit' name='nome' value=".$nomes[0]." class='compra-botao'>Comprar ".$nomes[0]."</button>";
+    echo "</form>";
     echo "</div>";
     ?>
     </div>
