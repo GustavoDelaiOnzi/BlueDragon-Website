@@ -13,6 +13,7 @@
 </head>
 <body>
     <div id="nav" class="container"></div>
+    <script>$( "#nav" ).load( "nav.html" );</script>
     <div class="produto" id="id_produto">
         <div class="produto-header">
             <h3>Teclados</h3>
@@ -64,7 +65,6 @@
             echo "</div>";
         ?>
     </div>
-    <script>$( "#nav" ).load( "nav.html" );</script>
-    <script src="script.js"></script>
+    <script src="script.js">openNav();</script>
 </body>
 </html>
