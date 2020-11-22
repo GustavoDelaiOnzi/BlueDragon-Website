@@ -10,10 +10,10 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="jquery-3.5.1.js"></script>
+    <script>$( "#nav" ).load( "nav.html" );</script>
 </head>
 <body>
     <div id="nav" class="container"></div>
-    <div class="compra">
     <?php
     include 'conexao.php';
 
@@ -28,8 +28,9 @@
     while($row = $result->fetch_assoc()){
         $nomes[] = $row["nome"];
         $precos[] = $row["preco"];
+        $descricao[] = $row["descricao"];
+        $teclado_path[] = $row["teclado_path"];
     }
-    $string_nome = "$nomes[0]";
     ?>
     <div class='compra-wrapper'>
         <div class='compra-nome'>
@@ -44,22 +45,20 @@
         </div>
         <div>
             <?php
-            echo "<img class='compra-imagem' src='imagens/teclado/".$nomes[0].".jpg'>";
+            echo "<img class='compra-imagem' src='imagens/teclado/".$teclado_path[0]."'>";
             ?>
         </div>
         <div class='descricao'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem beatae, explicabo corporis
-            assumenda obcaecati hic maxime aspernatur a. Asperiores laborum eius esse aut mollitia suscipit 
-            quasi placeat rem sequi necessitatibus.
+            <?php
+            echo $descricao[0];
+            ?>
         </div>
         <form method='get' action='compra-efetuada.php'>
             <?php
             echo "<button type='submit' name='nome' value=".$nomes[0]." class='compra-botao'>Comprar ".$nomes[0]."</button>";
             ?>
         </form>
-        </div>
     </div>
-    <script>$( "#nav" ).load( "nav.html" );</script>
     <script src="script.js"></script>
 </body>
 </html>

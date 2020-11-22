@@ -11,12 +11,9 @@ html{
     font-size: 62.5%;
 }
 
-.compra{
+.compra-wrapper{
     background-color: black;
     height: 100vh;
-}
-
-.compra-wrapper{
     position: relative;
     top: 10%;
     display: flex;

@@ -36,33 +36,32 @@
 
         $items_na_linha = 0;
         echo "<div class='produto-imagem-wrapper'>";
-        for ($i=($pagina-1)*8;$i < $max_index;$i++){
-            if ($items_na_linha>=4){
-                echo "</div>";
+            for ($i=($pagina-1)*8;$i < $max_index;$i++){
+                if ($items_na_linha>=4){
+                    echo "</div>";
+                }
+                if ($items_na_linha>=4){
+                    echo "<div class='produto-imagem-wrapper'>";
+                    $items_na_linha = 0;
+                }
+                    echo "<div class='produto-imagem'>";
+                    echo "<a href=./compra.php?id_teclado='".$id[$i]."'>";
+                    echo "<img src='imagens/teclado/".$teclado_path[$i]."'>";
+                    echo "</a>";
+                    echo "<div class='nome'>".$nomes[$i]."</div>";
+                    echo "<div class='preco'>R$".$precos[$i]."</div>";
+                    echo "</div>";
+                $items_na_linha += 1;
             }
-            if ($items_na_linha>=4){
-                echo "<div class='produto-imagem-wrapper'>";
-                $items_na_linha = 0;
-            }
-                echo "<div class='produto-imagem'>";
-                echo "<a href=./compra.php?id_teclado='".$id[$i]."'>";
-                echo "<img src='imagens/teclado/".$nomes[$i].".jpg'>";
-                echo "</a>";
-                echo "<div class='nome'>".$nomes[$i]."</div>";
-                echo "<div class='preco'>R$".$precos[$i]."</div>";
-                echo "</div>";
-            $items_na_linha += 1;
-        }
         echo "</div>";
         echo "<div class='botoes'>";
-
-        $numero_botoes = (count($nomes)/8)+1;
-        for($i=1;$i < $numero_botoes; $i++){
-            echo "<form action = '' method='get'>";
-            echo "<button type='submit' name='pagina' value='".$i."'>".$i."</button>";
-            echo "</form>";
-        }
-        echo "</div>";
+            $numero_botoes = (count($nomes)/8)+1;
+            for($i=1;$i < $numero_botoes; $i++){
+                echo "<form action = '' method='get'>";
+                echo "<button type='submit' name='pagina' value='".$i."'>".$i."</button>";
+                echo "</form>";
+            }
+            echo "</div>";
         ?>
     </div>
     <script>$( "#nav" ).load( "nav.html" );</script>

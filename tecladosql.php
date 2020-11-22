@@ -9,5 +9,7 @@
         $nomes[] = $row["nome"];
         $precos[] = $row["preco"];
         $id[] = $row["id_produto"];
+        $descricao[] = $row["descricao"];
+        $teclado_path[] = $row["teclado_path"];
     }
 ?>
