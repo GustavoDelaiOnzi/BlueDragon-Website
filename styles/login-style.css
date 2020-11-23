@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html{
+    font-size: 62.5%;
+    background-image: url('../imagens/bg2.jpg');
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: "mulish",serif;
+    font-weight: 200;
+    color: white;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-family: "mulish",serif;
+    font-weight: 400;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+    width: 100rem;
+}
+
+.failed{
+    text-align: center;
+    top: 50%;
+    font-family: "Mulish", serif;
+    font-size: 2rem;
+    color: red;
+}
+
+.criarconta {
+    position: relative;
+    top: 2rem;
+    font-size: 2rem;
+    font-family: "Mulish", serif;
+    font-weight: bold;
+    color: #aaa;
+    transition: color 0.3s;
+}
+
+.criarconta:visited {
+    color: #aaa;
+}
+
+.criarconta:hover {
+    color: #c29525;
+}

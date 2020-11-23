@@ -13,12 +13,11 @@
 </head>
 <body>
     <div id="nav" class="container"></div>
+    <script>$( "#nav" ).load( "nav.php" );</script>
     <div class="compra-efetuada">
         <?php 
         echo "Compra de ". $_GET["nome"] ." efetuada com sucesso";
         ?>
     </div>
-    <script>$( "#nav" ).load( "nav.html" );</script>
-    <script src="script.js"></script>
 </body>
 </html>

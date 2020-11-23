@@ -12,6 +12,7 @@ html{
 }
 
 .compra-efetuada {
+    background-image: url('../imagens/bg2.jpg');
     display: flex;
     align-items: center;
     justify-content: center;

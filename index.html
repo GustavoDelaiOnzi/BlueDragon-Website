@@ -12,17 +12,22 @@
     <script src="jquery-3.5.1.js"></script>
 </head>
 <body>
-    <div id="nav" class="container"></div>
-    <header class="header">
+    <div class="index-wrapper">
+        <div id="nav" class="container"></div>
+        <script>
+        $(document).ready(function(){
+        $( "#nav" ).load( "nav.php" );
+        })
+        </script>
+        <header class="header">
             <div class="img-wrapper">
-                <img src="imagens/bg.jpg">
+                <img src="imagens/bg2.jpg">
             </div>
             <div class="banner">
                 <h1>BlueDragon</h1>
-                <p>Melhor loja de eletrônicos de Florianópolis!</p>
+                <p>A melhor loja de eletrônicos de Florianópolis!</p>
             </div>
-    </header>
-    <script>$( "#nav" ).load( "nav.html" );</script>
-    <script src="script.js"></script>
+        </header>
+    </div>
 </body>
 </html>

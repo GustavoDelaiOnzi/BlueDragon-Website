@@ -1,15 +1,12 @@
 <?php
     include 'conexao.php';
-    $sql = "SELECT * from teclado";
+    $sql = "SELECT * from Mouse";
     $result = mysqli_query($conn, $sql);
-    $nomes = array();
-    $precos = array();
-    $id = array();
     while($row = $result->fetch_assoc()){
         $nomes[] = $row["nome"];
         $precos[] = $row["preco"];
-        $id[] = $row["id_teclado"];
+        $id[] = $row["id_mouse"];
         $descricao[] = $row["descricao"];
-        $teclado_path[] = $row["teclado_path"];
+        $mouse_path[] = $row["mouse_path"];
     }
-?>z
+?>

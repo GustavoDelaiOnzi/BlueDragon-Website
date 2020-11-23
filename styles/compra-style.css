@@ -12,7 +12,7 @@ html{
 }
 
 .compra-wrapper{
-    background-color: black;
+    background-image: url('../imagens/bg2.jpg');
     height: 100vh;
     position: relative;
     top: 10%;
@@ -29,8 +29,8 @@ html{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin: 5rem 7rem 0rem 7rem;
     margin: 2rem;
+    object-fit: cover;
 }
 
 .descricao {

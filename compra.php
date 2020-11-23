@@ -10,27 +10,37 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,300;0,400;0,600;0,700;1,100;1,300;1,400;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="jquery-3.5.1.js"></script>
-    <script>$( "#nav" ).load( "nav.html" );</script>
 </head>
 <body>
     <div id="nav" class="container"></div>
+    <script>$( "#nav" ).load( "nav.php" );</script>
     <?php
     include 'conexao.php';
 
     if(isset($_GET['id_teclado'])){
-        $teclado = $_GET['id_teclado'];
+        $id = $_GET['id_teclado'];
+        $sql = "SELECT * FROM teclado WHERE id_teclado=$id";
+        $result = mysqli_query($conn, $sql);
+        while($row = $result->fetch_assoc()){
+            $nomes[] = $row["nome"];
+            $precos[] = $row["preco"];
+            $descricao[] = $row["descricao"];
+            $path[] = $row["teclado_path"];
+        }
     }
 
-    $sql = "SELECT * FROM Produto WHERE id_produto=$teclado";
-    $result = mysqli_query($conn, $sql);
-    $nomes = array();
-    $precos = array();
-    while($row = $result->fetch_assoc()){
-        $nomes[] = $row["nome"];
-        $precos[] = $row["preco"];
-        $descricao[] = $row["descricao"];
-        $teclado_path[] = $row["teclado_path"];
+    if(isset($_GET['id_mouse'])){
+        $id = $_GET['id_mouse'];
+        $sql = "SELECT * FROM mouse WHERE id_mouse=$id";
+        $result = mysqli_query($conn, $sql);
+        while($row = $result->fetch_assoc()){
+            $nomes[] = $row["nome"];
+            $precos[] = $row["preco"];
+            $descricao[] = $row["descricao"];
+            $path[] = $row["mouse_path"];
+        }
     }
+
     ?>
     <div class='compra-wrapper'>
         <div class='compra-nome'>
@@ -45,7 +55,12 @@
         </div>
         <div>
             <?php
-            echo "<img class='compra-imagem' src='imagens/teclado/".$teclado_path[0]."'>";
+            if(isset($_GET['id_teclado'])){
+            echo "<img class='compra-imagem' src='imagens/teclado/".$path[0]."'>";
+            }
+            else{
+                echo "<img class='compra-imagem' src='imagens/mouse/".$path[0]."'>";
+            }
             ?>
         </div>
         <div class='descricao'>
@@ -59,6 +74,5 @@
             ?>
         </form>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

@@ -16,14 +16,13 @@
     <script>$( "#nav" ).load( "nav.php" );</script>
     <div class="produto" id="id_produto">
         <div class="produto-header">
-            <h3>Teclados</h3>
-            <p>A escolha Profissional pra quem quer mais performance, 
-                prazer na digitação e um teclado durável. Produtos aprovados 
-                por especialistas e jogadores em todo o mundo - a BlueDragon 
-                tem a opção certa para você.</p>
+            <h3>Mouses</h3>
+            <p>As melhores opções de Custo x Benefício: design, performance e
+               recursos pra quem quer detonar nos Games - a BlueDragon tem a
+               opção certa para você.</p>
         </div>
         <?php
-        include 'tecladosql.php';
+        include 'mousesql.php';
         
         $pagina = 1;
         if(isset($_GET['pagina'])){
@@ -46,8 +45,8 @@
                     $items_na_linha = 0;
                 }
                     echo "<div class='produto-imagem'>";
-                    echo "<a href=./compra.php?id_teclado='".$id[$i]."'>";
-                    echo "<img src='imagens/teclado/".$teclado_path[$i]."'>";
+                    echo "<a href=./compra.php?id_mouse='".$id[$i]."'>";
+                    echo "<img src='imagens/mouse/".$mouse_path[$i]."'>";
                     echo "</a>";
                     echo "<div class='nome'>".$nomes[$i]."</div>";
                     echo "<div class='preco'>R$".$precos[$i]."</div>";
